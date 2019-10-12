@@ -1,1 +1,0 @@
-install some build tools,base from trzeci/emscripten

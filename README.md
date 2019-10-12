@@ -1,2 +1,7 @@
 # wasm-im
-wasm &amp; imageMagick
+
+wasm  
+
+imageMagick
+
+增加对 webp 的支持
