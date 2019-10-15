@@ -39,7 +39,7 @@
   <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
   <configure name="PREFIX" value="/"/>
   <configure name="QuantumDepth" value="16"/>
-  <configure name="RELEASE_DATE" value="2019-10-14"/>
+  <configure name="RELEASE_DATE" value="2019-10-15"/>
   <configure name="SHAREARCH_PATH" value="//lib/ImageMagick-7.0.8/config-Q16HDRI"/>
   <configure name="SHARE_PATH" value="//share/ImageMagick-7"/>
   <configure name="TARGET_CPU" value="x86_64"/>
