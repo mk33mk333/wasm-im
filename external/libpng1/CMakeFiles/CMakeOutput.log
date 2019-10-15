@@ -1,0 +1,22 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Linux - 4.18.0-25-generic - x86_64
+Performing C SOURCE FILE Test HAVE_LD_VERSION_SCRIPT succeeded with the following output:
+Change Dir: /wasm/libpng/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_18434/fast 
+/usr/bin/make -f CMakeFiles/cmTC_18434.dir/build.make CMakeFiles/cmTC_18434.dir/build
+make[1]: Entering directory '/wasm/libpng/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_18434.dir/src.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=2 -DHAVE_LD_VERSION_SCRIPT -Wl,--version-script='/wasm/libpng/conftest.map'   -o CMakeFiles/cmTC_18434.dir/src.c.o   -c /wasm/libpng/CMakeFiles/CMakeTmp/src.c
+emcc:WARNING: ignoring unsupported linker flag: `--version-script=/wasm/libpng/conftest.map`
+Linking C executable cmTC_18434.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18434.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=2 -DHAVE_LD_VERSION_SCRIPT -Wl,--version-script='/wasm/libpng/conftest.map'    @CMakeFiles/cmTC_18434.dir/objects1.rsp  -o cmTC_18434.js 
+emcc:WARNING: ignoring unsupported linker flag: `--version-script=/wasm/libpng/conftest.map`
+make[1]: Leaving directory '/wasm/libpng/CMakeFiles/CMakeTmp'
+
+Source file was:
+void sym(void) {}
+void sym2(void) {}
+int main(void) {return 0;}
+

@@ -1,0 +1,87 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Linux - 4.18.0-25-generic - x86_64
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9f5a0/fast 
+/usr/bin/make -f CMakeFiles/cmTC_9f5a0.dir/build.make CMakeFiles/cmTC_9f5a0.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f5a0.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1    -o CMakeFiles/cmTC_9f5a0.dir/CheckIncludeFile.c.o   -c /wasm/zlib/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9f5a0.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f5a0.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1     @CMakeFiles/cmTC_9f5a0.dir/objects1.rsp  -o cmTC_9f5a0.js 
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f5b13/fast 
+/usr/bin/make -f CMakeFiles/cmTC_f5b13.dir/build.make CMakeFiles/cmTC_f5b13.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5b13.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1    -o CMakeFiles/cmTC_f5b13.dir/CheckIncludeFile.c.o   -c /wasm/zlib/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f5b13.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5b13.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1     @CMakeFiles/cmTC_f5b13.dir/objects1.rsp  -o cmTC_f5b13.js 
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dfda3/fast 
+/usr/bin/make -f CMakeFiles/cmTC_dfda3.dir/build.make CMakeFiles/cmTC_dfda3.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dfda3.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1    -o CMakeFiles/cmTC_dfda3.dir/CheckIncludeFile.c.o   -c /wasm/zlib/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dfda3.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfda3.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1     @CMakeFiles/cmTC_dfda3.dir/objects1.rsp  -o cmTC_dfda3.js 
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+
+Determining size of off64_t passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9ca8c/fast 
+/usr/bin/make -f CMakeFiles/cmTC_9ca8c.dir/build.make CMakeFiles/cmTC_9ca8c.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ca8c.dir/OFF64_T.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1    -o CMakeFiles/cmTC_9ca8c.dir/OFF64_T.c.o   -c /wasm/zlib/CMakeFiles/CheckTypeSize/OFF64_T.c
+Linking C executable cmTC_9ca8c.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ca8c.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1     @CMakeFiles/cmTC_9ca8c.dir/objects1.rsp  -o cmTC_9ca8c.js 
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2675/fast 
+/usr/bin/make -f CMakeFiles/cmTC_b2675.dir/build.make CMakeFiles/cmTC_b2675.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2675.dir/CheckFunctionExists.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -DCHECK_FUNCTION_EXISTS=fseeko   -o CMakeFiles/cmTC_b2675.dir/CheckFunctionExists.c.o   -c /opt/cmake/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b2675.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2675.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -DCHECK_FUNCTION_EXISTS=fseeko    @CMakeFiles/cmTC_b2675.dir/objects1.rsp  -o cmTC_b2675.js 
+warning: asm2wasm adding operands in call from $_main to $___fseeko (this is likely due to undefined behavior in C, like defining a function one way and calling it in another, which is important to fix)
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /wasm/zlib/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5844b/fast 
+/usr/bin/make -f CMakeFiles/cmTC_5844b.dir/build.make CMakeFiles/cmTC_5844b.dir/build
+make[1]: Entering directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5844b.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1    -o CMakeFiles/cmTC_5844b.dir/CheckIncludeFile.c.o   -c /wasm/zlib/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5844b.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5844b.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1     @CMakeFiles/cmTC_5844b.dir/objects1.rsp  -o cmTC_5844b.js 
+make[1]: Leaving directory '/wasm/zlib/CMakeFiles/CMakeTmp'
+
+

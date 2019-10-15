@@ -1,0 +1,13 @@
+/wasm/zlib/CMakeFiles/install/strip.dir
+/wasm/zlib/CMakeFiles/install.dir
+/wasm/zlib/CMakeFiles/list_install_components.dir
+/wasm/zlib/CMakeFiles/rebuild_cache.dir
+/wasm/zlib/CMakeFiles/edit_cache.dir
+/wasm/zlib/CMakeFiles/zlibstatic.dir
+/wasm/zlib/CMakeFiles/zlib.dir
+/wasm/zlib/CMakeFiles/example.dir
+/wasm/zlib/CMakeFiles/minigzip.dir
+/wasm/zlib/CMakeFiles/install/local.dir
+/wasm/zlib/CMakeFiles/test.dir
+/wasm/zlib/CMakeFiles/minigzip64.dir
+/wasm/zlib/CMakeFiles/example64.dir

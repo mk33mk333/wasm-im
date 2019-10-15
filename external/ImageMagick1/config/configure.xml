@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+  <!ELEMENT configuremap (configure)+>
+  <!ATTLIST configuremap xmlns CDATA #FIXED ''>
+  <!ELEMENT configure EMPTY>
+  <!ATTLIST configure xmlns CDATA #FIXED '' name NMTOKEN #REQUIRED
+    value CDATA #REQUIRED>
+]>
+<!--
+  ImageMagick build configuration.
+-->
+<configuremap>
+  <configure name="CC" value="/emsdk_portable/emscripten/tag-1.38.45/emcc"/>
+  <configure name="CFLAGS" value="-I/usr/local/include -I/usr/local/include -I/usr/local/include/libpng16 -I/usr/local/include -I/usr/local/include   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -Wall -fexceptions -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="//lib/ImageMagick-7.0.8/modules-Q16HDRI/coders"/>
+  <configure name="CONFIGURE_PATH" value="//etc/ImageMagick-7/"/>
+  <configure name="CONFIGURE" value="./configure  '--prefix=/' '--disable-shared' '--without-threads' '--without-magick-plus-plus' '--without-perl' '--without-x' '--disable-largefile' '--disable-openmp' '--without-bzlib' '--without-dps' '--without-freetype' '--without-jbig' '--without-openjp2' '--without-lcms' '--without-wmf' '--without-fftw' '--without-flif' '--without-fpx' '--without-djvu' '--without-fontconfig' '--without-raqm' '--without-gslib' '--without-gvc' '--without-heic' '--without-lqr' '--without-openexr' '--without-pango' '--without-raw' '--without-rsvg' '--without-xml' 'PKG_CONFIG_PATH=/wasm/libpng:/wasm/zlib:/wasm/libjpeg:/wasm/libwebp/src:/wasm/libwebp/src/mux:/wasm/libwebp/src/demux:' 'CC=/emsdk_portable/emscripten/tag-1.38.45/emcc' 'CFLAGS=-O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0' 'LDFLAGS=-L/wasm/zlib -L/wasm/libpng -L/wasm/libpng/.libs -L/wasm/libjpeg -L/wasm/libwebp' 'CPPFLAGS=-I/wasm/libpng -I/wasm/zlib -I/wasm/libjpeg -I/wasm/libwebp/src' 'CXX=/emsdk_portable/emscripten/tag-1.38.45/em++' 'CXXFLAGS=-O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0' 'PKG_CONFIG_LIBDIR=/emsdk_portable/emscripten/tag-1.38.45/system/local/lib/pkgconfig:/emsdk_portable/emscripten/tag-1.38.45/system/lib/pkgconfig' 'PNG_LIBS=-L/code/libpng -L/code/libpng/.libs'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2019 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I//include/ImageMagick-7"/>
+  <configure name="CXXFLAGS" value="-O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0"/>
+  <configure name="CXX" value="/emsdk_portable/emscripten/tag-1.38.45/em++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="mpeg jng jpeg png webp zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="'CC=/emsdk_portable/emscripten/tag-1.38.45/emcc' 'CFLAGS=-O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0' 'CPPFLAGS=-I/wasm/libpng -I/wasm/zlib -I/wasm/libjpeg -I/wasm/libwebp/src' 'CXX=/emsdk_portable/emscripten/tag-1.38.45/em++' 'LDFLAGS=-L/wasm/zlib -L/wasm/libpng -L/wasm/libpng/.libs -L/wasm/libjpeg -L/wasm/libwebp'  --disable-deprecated  --with-quantum-depth=16  --with-jemalloc=no  --with-umem=no  --with-bzlib=no  --with-autotrace=no  --with-dps=no  --with-fftw=no  --with-flif=no  --with-fpx=no  --with-djvu=no  --with-fontconfig=no  --with-freetype=no  --with-raqm=no  --with-gslib=no  --with-fontpath=  --with-gvc=no  --with-heic=no  --with-lcms=no  --with-openjp2=no  --with-lqr=no  --with-openexr=no  --with-pango=no  --with-libraw=no  --with-rsvg=no  --with-wmf=no  --with-xml=no  --with-perl=no "/>
+  <configure name="DOCUMENTATION_PATH" value="//share/doc/ImageMagick-7"/>
+  <configure name="EXEC-PREFIX" value="/"/>
+  <configure name="EXECUTABLE_PATH" value="//bin"/>
+  <configure name="FEATURES" value="DPC HDRI Cipher"/>
+  <configure name="FILTER_PATH" value="//lib/ImageMagick-7.0.8/modules-Q16HDRI/filters"/>
+  <configure name="GIT_REVISION" value="" />
+  <configure name="HOST" value="x86_64-pc-linux-gnu"/>
+  <configure name="INCLUDE_PATH" value="//include/ImageMagick-7"/>
+  <configure name="LDFLAGS" value="-L//lib -L/wasm/zlib -L/wasm/libpng -L/wasm/libpng/.libs -L/wasm/libjpeg -L/wasm/libwebp"/>
+  <configure name="LIBRARY_PATH" value="//lib/ImageMagick-7.0.8"/>
+  <configure name="LIBS" value="      -ljpeg    -L/usr/local/lib -lpng16 -lz        -L/usr/local/lib -lwebpmux -lwebpdemux -lwebp -L/usr/local/lib -lwebp                -L/usr/local/lib -lz           "/>
+  <configure name="LIB_VERSION_NUMBER" value="7,0,8,69"/>
+  <configure name="LIB_VERSION" value="0x708"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2019-10-14"/>
+  <configure name="SHAREARCH_PATH" value="//lib/ImageMagick-7.0.8/config-Q16HDRI"/>
+  <configure name="SHARE_PATH" value="//share/ImageMagick-7"/>
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="linux-gnu"/>
+  <configure name="TARGET_VENDOR" value="pc"/>
+  <configure name="VERSION" value="7.0.8"/>
+  <configure name="WEBSITE" value="https://imagemagick.org"/>
+</configuremap>

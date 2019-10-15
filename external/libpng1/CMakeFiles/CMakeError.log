@@ -1,0 +1,134 @@
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple LLVM version)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is HP using "-V" did not match "HP C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is MSVC using "-?" did not match "Microsoft":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is TI using "-h" did not match "Texas Instruments":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is IAR using "" did not match "IAR Assembler":
+emcc:WARNING: no input files
+Checking whether the ASM compiler is ARMCC using "" did not match "(ARM Compiler)|(ARM Assembler)":
+emcc:WARNING: no input files
+Checking whether the ASM compiler is NASM using "-v" did not match "(NASM version)":
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 1.38.45
+clang version 6.0.1 (https://github.com/emscripten-core/emscripten-fastcomp-clang 98df4be387dde3e3918fa5bbb5fc43e1a0e1daac) (https://github.com/emscripten-core/emscripten-fastcomp 6c7e775325067e33fa60611e619a8b987b6d0c35) (emscripten 1.38.44 : 1.38.31)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /emsdk_portable/clang/tag-e1.38.45/build_tag-e1.38.45_64/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+shared:INFO: (Emscripten: Running sanity checks)
+Checking whether the ASM compiler is YASM using "--version" did not match "(yasm)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is ADSP using "-version" did not match "Analog Devices":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is QCC using "-V" did not match "gcc_nto":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple LLVM version)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is HP using "-V" did not match "HP C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is MSVC using "-?" did not match "Microsoft":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is TI using "-h" did not match "Texas Instruments":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is IAR using "" did not match "IAR Assembler":
+emcc:WARNING: no input files
+Checking whether the ASM compiler is ARMCC using "" did not match "(ARM Compiler)|(ARM Assembler)":
+emcc:WARNING: no input files
+Checking whether the ASM compiler is NASM using "-v" did not match "(NASM version)":
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 1.38.45
+clang version 6.0.1 (https://github.com/emscripten-core/emscripten-fastcomp-clang 98df4be387dde3e3918fa5bbb5fc43e1a0e1daac) (https://github.com/emscripten-core/emscripten-fastcomp 6c7e775325067e33fa60611e619a8b987b6d0c35) (emscripten 1.38.44 : 1.38.31)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /emsdk_portable/clang/tag-e1.38.45/build_tag-e1.38.45_64/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+shared:INFO: (Emscripten: Running sanity checks)
+Checking whether the ASM compiler is YASM using "--version" did not match "(yasm)":
+emcc (Emscripten gcc/clang-like replacement) 1.38.45 ((unknown revision))
+Copyright (C) 2014 the Emscripten authors (see AUTHORS.txt)
+This is free and open source software under the MIT license.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  
+Checking whether the ASM compiler is ADSP using "-version" did not match "Analog Devices":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')
+Checking whether the ASM compiler is QCC using "-V" did not match "gcc_nto":
+shared:ERROR: no input files
+note that input files without a known suffix are ignored, make sure your input files end with one of: ('.c', '.C', '.i', '.cpp', '.cxx', '.cc', '.c++', '.CPP', '.CXX', '.CC', '.C++', '.ii', '.m', '.mi', '.mm', '.mii', '/dev/null', '.bc', '.o', '.obj', '.lo', '.dylib', '.so', '.a', '.ll', '.h', '.hxx', '.hpp', '.hh', '.H', '.HXX', '.HPP', '.HH')

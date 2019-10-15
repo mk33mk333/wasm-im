@@ -1,0 +1,1 @@
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1   @CMakeFiles/minigzip.dir/objects1.rsp  -o minigzip.js @CMakeFiles/minigzip.dir/linklibs.rsp

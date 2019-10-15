@@ -1,0 +1,1 @@
+/emsdk_portable/emscripten/tag-1.38.45/emar rc libpng16.a  @CMakeFiles/png_static.dir/objects1.rsp

@@ -1,0 +1,9 @@
+/wasm/libjpeg/CMakeFiles/install/strip.dir
+/wasm/libjpeg/CMakeFiles/install/local.dir
+/wasm/libjpeg/CMakeFiles/install.dir
+/wasm/libjpeg/CMakeFiles/package.dir
+/wasm/libjpeg/CMakeFiles/package_source.dir
+/wasm/libjpeg/CMakeFiles/edit_cache.dir
+/wasm/libjpeg/CMakeFiles/jpeg.dir
+/wasm/libjpeg/CMakeFiles/rebuild_cache.dir
+/wasm/libjpeg/CMakeFiles/list_install_components.dir

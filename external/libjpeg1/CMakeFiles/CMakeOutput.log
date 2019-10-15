@@ -1,0 +1,30 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Linux - 4.18.0-25-generic - x86_64
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /wasm/libjpeg/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_13311/fast 
+/usr/bin/make -f CMakeFiles/cmTC_13311.dir/build.make CMakeFiles/cmTC_13311.dir/build
+make[1]: Entering directory '/wasm/libjpeg/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13311.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=1    -o CMakeFiles/cmTC_13311.dir/CheckIncludeFile.c.o   -c /wasm/libjpeg/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_13311.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13311.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=1     @CMakeFiles/cmTC_13311.dir/objects1.rsp  -o cmTC_13311.js 
+make[1]: Leaving directory '/wasm/libjpeg/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /wasm/libjpeg/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_28a08/fast 
+/usr/bin/make -f CMakeFiles/cmTC_28a08.dir/build.make CMakeFiles/cmTC_28a08.dir/build
+make[1]: Entering directory '/wasm/libjpeg/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28a08.dir/CheckIncludeFile.c.o
+/emsdk_portable/emscripten/tag-1.38.45/emcc   -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=1    -o CMakeFiles/cmTC_28a08.dir/CheckIncludeFile.c.o   -c /wasm/libjpeg/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_28a08.js
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28a08.dir/link.txt --verbose=1
+/emsdk_portable/emscripten/tag-1.38.45/emcc -O3 -s BINARYEN_TRAP_MODE=clamp -s ALLOW_MEMORY_GROWTH=1 -s USE_PTHREADS=0 -s ASSERTIONS=1     @CMakeFiles/cmTC_28a08.dir/objects1.rsp  -o cmTC_28a08.js 
+make[1]: Leaving directory '/wasm/libjpeg/CMakeFiles/CMakeTmp'
+
+

@@ -1,0 +1,13 @@
+/wasm/libpng/CMakeFiles/install/strip.dir
+/wasm/libpng/CMakeFiles/install/local.dir
+/wasm/libpng/CMakeFiles/test.dir
+/wasm/libpng/CMakeFiles/genvers.dir
+/wasm/libpng/CMakeFiles/list_install_components.dir
+/wasm/libpng/CMakeFiles/gensym.dir
+/wasm/libpng/CMakeFiles/symbol-check.dir
+/wasm/libpng/CMakeFiles/edit_cache.dir
+/wasm/libpng/CMakeFiles/genprebuilt.dir
+/wasm/libpng/CMakeFiles/rebuild_cache.dir
+/wasm/libpng/CMakeFiles/genfiles.dir
+/wasm/libpng/CMakeFiles/install.dir
+/wasm/libpng/CMakeFiles/png_static.dir

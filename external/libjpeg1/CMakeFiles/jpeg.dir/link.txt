@@ -1,0 +1,1 @@
+/emsdk_portable/emscripten/tag-1.38.45/emar rc libjpeg.a  @CMakeFiles/jpeg.dir/objects1.rsp
