@@ -1,0 +1,53 @@
+<html>
+    <body>
+        <script>
+            const command = [
+                "convert","-delay","100", "-size", "300x300", "xc:SkyBlue", 
+                "-page", "+5+10","1.png",
+                "-page", "+35+30","2.jpg",
+                "-page", "+62+50","3.webp",
+                "-loop","0","animation.gif",
+            ];
+            var  stdout = []
+            var  stderr = []
+            var  exitCode = 0
+            if (typeof Module == 'undefined') {
+                Module = {
+                    noInitialRun: true,
+                    moduleLoaded: false,
+                    messagesToProcess: [],
+
+                    print: text => {
+                        stdout.push(text)
+                        console.log(text)
+                    },
+                    printErr: text => {
+                        stderr.push(text)
+                        console.error(text);
+                    }
+                }
+                Module.onRuntimeInitialized = function () {
+                    Module.moduleLoaded = true
+                    FS.mkdir('/im')
+                    FS.currentPath = '/im'
+                    console.log('模块加载完成',Module);
+                    getImg(Module);
+                }
+
+                async function getImg(Module){
+                    FS.writeFile('1.png', new Uint8Array(await(await fetch("1.png")).arrayBuffer()))
+                    FS.writeFile('2.jpg', new Uint8Array(await(await fetch("2.jpg")).arrayBuffer()))
+                    FS.writeFile('3.webp', new Uint8Array(await(await fetch("3.webp")).arrayBuffer()))
+                    var result = Module.callMain(command)
+                    var gif = FS.readFile('animation.gif')
+                    var gifBlob = new Blob([gif]);
+                    var img = document.createElement('img');
+                    img.src = URL.createObjectURL(gifBlob);
+                    document.body.appendChild(img)
+                }
+            }    
+            
+        </script>
+        <script src = "./wasm-im.js"></script>
+    </body>
+</html>
