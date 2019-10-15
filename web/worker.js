@@ -26,6 +26,7 @@ onmessage = function(e) {
             var command = e.data.data.command;
             var files = e.data.data.files;
             var back = e.data.data.back;
+            var cid = e.data.data.cid;
             if(files.length){
                 Promise.all(files.map(file=>{
                     var url = file;
@@ -44,10 +45,10 @@ onmessage = function(e) {
                 })).then(_=>{
                     Module.callMain(command);
                     var ab = FS.readFile(back).buffer
-                    postMessage({ type:'work', data:ab }, [ab])
+                    postMessage({ type:'work', data:ab , cid:cid}, [ab])
                 }).catch(err=>{
                     console.log(err);
-                    postMessage({ type:'error', data:err })
+                    postMessage({ type:'error', data:err , cid:cid})
                 })
             }
 

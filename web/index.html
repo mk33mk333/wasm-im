@@ -21,15 +21,52 @@
             </div>
         </div>
         <div id = "state" style="margin:5px 0;">准备中...</div>
-        <div id = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
-                convert -delay 100  -size 300x300 xc:SkyBlue \
-                -page +5+10  1.png   -page +85+80 2.jpg  \
-                -page +152+150 3.webp \
-                -loop 0 animation.gif
+        <ul id = "list" style="list-style: none; padding: 0;">
+            <li>
+                <div class = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
+                    convert -delay 100  -size 300x300 xc:SkyBlue \
+                    -page +5+10  1.png   -page +85+80 2.jpg  \
+                    -page +152+150 3.webp \
+                    -loop 0 animation.gif
+                </div>
+                <button class = "btn" disabled = "disabled">执行命令</button>
+                <hr/>
+                <div class = "output"></div>
+            </li>
 
-        </div>
-        <button id = "btn" disabled = "disabled">执行命令</button>
-        <hr/>
+            <li>
+                <div class = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
+                        convert 2.jpg -thumbnail 120x120 \
+                        -bordercolor white -background black  +polaroid  poloroid.png
+
+                </div>
+                <button class = "btn" disabled = "disabled">执行命令</button>
+                <hr/>
+                <div class = "output"></div>
+            </li>
+
+            <li>
+                <div class = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
+                        convert 2.jpg -resize 50% rose.png
+
+                </div>
+                <button class = "btn" disabled = "disabled">执行命令</button>
+                <hr/>
+                <div class = "output"></div>
+            </li>
+
+            <li>
+                <div class = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
+                        composite -gravity center 2.jpg 3.webp  rose-over.png
+
+                </div>
+                <button class = "btn" disabled = "disabled">执行命令</button>
+                <hr/>
+                <div class = "output"></div>
+            </li>
+
+
+        </ul>        
         <script>
             var imWorker = new Worker('worker.js', { name : 'imWorker' });
             imWorker.onerror = function (err) {
@@ -43,30 +80,39 @@
                 if(e.data.type == "ready"){
                     console.log('worker已准备好');
                     document.querySelector('#state').textContent = "已准备好"
-                    document.querySelector('#btn').removeAttribute('disabled')
+                    Array.from(document.querySelectorAll('.btn')).forEach(el=>{
+                        el.removeAttribute('disabled')
+                    }) 
                 }
                 if(e.data.type == 'work'){
                     console.log('任务返回数据',e.data);
                     var ab = e.data.data;
+                    var cid = e.data.cid;
                     var blob = new Blob([ab]);
                     var img = document.createElement('img');
                     img.src = URL.createObjectURL(blob);
-                    document.body.appendChild(img)
+                    Array.from(document.querySelectorAll('.output'))[cid].appendChild(img);
                 }
             })
-            document.querySelector('#btn').addEventListener('click',e=>{
-                var text = document.querySelector('#cmd').textContent;
-                var files = [];
-                var command = text.trim().split(/\s+/).filter(seg=>{
-                    if(seg == '\\')return false
-                    if(seg.match(/\.(jpg|png|webp|jpeg|gif)$/))files.push(seg);
-                    return true;
-                });
-                var back = files.pop();
-                console.log(command,files);
-                document.querySelector('#state').textContent = `使用${files.join(',')},生成${back}`;
-                imWorker.postMessage({type:'cmd',data:{command:command,files:files,back:back}})  
+            Array.from(document.querySelector('#list').querySelectorAll('li')).forEach((li,i)=>{
+                let btn = li.querySelector('.btn');
+                let cmd = li.querySelector('.cmd');
+                let cid = i;
+                btn.addEventListener('click',e=>{
+                    var text = cmd.textContent;
+                    var files = [];
+                    var command = text.trim().split(/\s+/).filter(seg=>{
+                        if(seg == '\\')return false
+                        if(seg.match(/\.(jpg|png|webp|jpeg|gif)$/))files.push(seg);
+                        return true;
+                    });
+                    var back = files.pop();
+                    console.log(command,files);
+                    document.querySelector('#state').textContent = `使用${files.join(',')},生成${back}`;
+                    imWorker.postMessage({type:'cmd',data:{command:command,files:files,back:back,cid:cid}})  
+                })
             })
+
         </script>
     </body>
 </html>
