@@ -1,37 +1,57 @@
-var  stdout = []
-var  stderr = []
-var  exitCode = 0
-if (typeof Module == 'undefined') {
-    Module = {
-        noInitialRun: true,
-        moduleLoaded: false,
-        messagesToProcess: [],
-        print: text => {
-            stdout.push(text)
-            console.log(text)
-        },
-        printErr: text => {
-            stderr.push(text)
-            console.error(text);
-        }
-    }
-    Module.onRuntimeInitialized = function () {
-        Module.moduleLoaded = true
-        FS.mkdir('/im')
-        FS.currentPath = '/im'
-        console.log('模块加载完成',Module);
-        getImg(Module);
-    }
-
-    async function getImg(Module){
-        FS.writeFile('1.jpg', new Uint8Array(await(await fetch("1.jpg")).arrayBuffer()))
-        FS.writeFile('2.jpg', new Uint8Array(await(await fetch("2.jpg")).arrayBuffer()))
-        FS.writeFile('3.jpg', new Uint8Array(await(await fetch("3.jpg")).arrayBuffer()))
-        Module.callMain(command)
-        var gif = FS.readFile('animation.gif')
-        var gifBlob = new Blob([gif]);
-        var img = document.createElement('img');
-        img.src = URL.createObjectURL(gifBlob);
-        document.body.appendChild(img)
+var Module = {
+    locateFile: _ => 'wasm/wasm-im.wasm',
+    noInitialRun: true,
+    moduleLoaded: false,
+    messagesToProcess: [],
+    print: text => {
+        console.log(text)
+    },
+    printErr: text => {
+        console.error(text);
     }
 }
+Module.onRuntimeInitialized = function () {
+    Module.moduleLoaded = true
+    FS.mkdir('/im')
+    FS.currentPath = '/im'
+    console.log('模块加载完成',Module);
+    postMessage({
+        type: "ready"
+    });
+    // getImg(Module);
+}
+onmessage = function(e) {
+    if(Module.moduleLoaded){
+        if(e.data.type == 'cmd'){
+            var command = e.data.data.command;
+            var files = e.data.data.files;
+            var back = e.data.data.back;
+            if(files.length){
+                Promise.all(files.map(file=>{
+                    var url = file;
+                    if(!file.match(/^http/))url = `img/${file}`
+                    return fetch(url).then(data=>{
+                        console.log(data)
+                        if(data.status != 200){
+                            throw `fetch ${file} error: ${data.statusText}`
+                        }else{
+                            return data.arrayBuffer()
+                        }
+                    }).then(ab=>{
+                        FS.writeFile(file,new Uint8Array(ab))
+                        return true
+                    })
+                })).then(_=>{
+                    Module.callMain(command);
+                    var ab = FS.readFile(back).buffer
+                    postMessage({ type:'work', data:ab }, [ab])
+                }).catch(err=>{
+                    console.log(err);
+                    postMessage({ type:'error', data:err })
+                })
+            }
+
+        }
+    }
+}
+importScripts('wasm/wasm-im.js'); 
