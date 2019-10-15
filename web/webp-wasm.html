@@ -18,12 +18,12 @@ var WebpToCanvas;
 
 function init() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '../webp_wasm.wasm', true);
+  xhr.open('GET', './wasm/webp_wasm.wasm', true);
   xhr.responseType = 'arraybuffer';
   xhr.onload = function() {
     Module.wasmBinary = xhr.response;
     var script = document.createElement('script');
-    script.src = "../webp_wasm.js";
+    script.src = "./wasm/webp_wasm.js";
     document.body.appendChild(script);
   };
   xhr.send(null);
@@ -82,7 +82,7 @@ function loadfile(filename, canvas_id) {
   </p>
   <p id="image_buttons">
     <input type="button" value="test image!"
-           onclick="loadfile('./test_webp_wasm.webp', 'output_canvas')">
+           onclick="loadfile('./img/test_webp_wasm.webp', 'output_canvas')">
   </p>
   <p id="timing">Timing: N/A</p>
   <canvas id="output_canvas">Your browser does not support canvas</canvas>

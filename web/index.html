@@ -35,9 +35,9 @@
                 }
 
                 async function getImg(Module){
-                    FS.writeFile('1.png', new Uint8Array(await(await fetch("1.png")).arrayBuffer()))
-                    FS.writeFile('2.jpg', new Uint8Array(await(await fetch("2.jpg")).arrayBuffer()))
-                    FS.writeFile('3.webp', new Uint8Array(await(await fetch("3.webp")).arrayBuffer()))
+                    FS.writeFile('1.png', new Uint8Array(await(await fetch("img/1.png")).arrayBuffer()))
+                    FS.writeFile('2.jpg', new Uint8Array(await(await fetch("img/2.jpg")).arrayBuffer()))
+                    FS.writeFile('3.webp', new Uint8Array(await(await fetch("img/3.webp")).arrayBuffer()))
                     var result = Module.callMain(command)
                     var gif = FS.readFile('animation.gif')
                     var gifBlob = new Blob([gif]);
@@ -48,6 +48,6 @@
             }    
             
         </script>
-        <script src = "./wasm-im.js"></script>
+        <script src = "./wasm/wasm-im.js"></script>
     </body>
 </html>
