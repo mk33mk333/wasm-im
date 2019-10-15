@@ -1,0 +1,72 @@
+<html>
+    <body>
+        <style>
+            .item{
+                width:200px;height:200px;display: flex; align-items: center;flex-direction: column;justify-content:center
+            }
+        </style>
+        <div style=" display: flex; align-items: center; text-align: center; ">
+                <div class="item">
+                    <img src="img/1.png">
+                    <div>1.png</div>
+                </div>
+                <div class="item">
+                    <img src="img/2.jpg">
+                    <div>2.jpg</div>
+                </div>
+                <div class="item">
+                    <img src="img/3.webp">
+                    <div>3.webp</div>
+                </div>
+            </div>
+        </div>
+        <div id = "state" style="margin:5px 0;">准备中...</div>
+        <div id = "cmd" style="white-space: pre-line; background: #f2f2f2; padding: 5px;margin: 5px 0;">
+                convert -delay 100  -size 300x300 xc:SkyBlue \
+                -page +5+10  1.png   -page +85+80 2.jpg  \
+                -page +152+150 3.webp \
+                -loop 0 animation.gif
+
+        </div>
+        <button id = "btn" disabled = "disabled">执行命令</button>
+        <hr/>
+        <script>
+            var imWorker = new Worker('worker.js', { name : 'imWorker' });
+            imWorker.onerror = function (err) {
+                console.log(err);
+                document.querySelector('#state').textContent = `err`
+            }
+            imWorker.onmessageerror = function (err) {
+                document.querySelector('#state').textContent = `messageerror`
+            }
+            imWorker.addEventListener("message",e=>{
+                if(e.data.type == "ready"){
+                    console.log('worker已准备好');
+                    document.querySelector('#state').textContent = "已准备好"
+                    document.querySelector('#btn').removeAttribute('disabled')
+                }
+                if(e.data.type == 'work'){
+                    console.log('任务返回数据',e.data);
+                    var ab = e.data.data;
+                    var blob = new Blob([ab]);
+                    var img = document.createElement('img');
+                    img.src = URL.createObjectURL(blob);
+                    document.body.appendChild(img)
+                }
+            })
+            document.querySelector('#btn').addEventListener('click',e=>{
+                var text = document.querySelector('#cmd').textContent;
+                var files = [];
+                var command = text.trim().split(/\s+/).filter(seg=>{
+                    if(seg == '\\')return false
+                    if(seg.match(/\.(jpg|png|webp|jpeg|gif)$/))files.push(seg);
+                    return true;
+                });
+                var back = files.pop();
+                console.log(command,files);
+                document.querySelector('#state').textContent = `使用${files.join(',')},生成${back}`;
+                imWorker.postMessage({type:'cmd',data:{command:command,files:files,back:back}})  
+            })
+        </script>
+    </body>
+</html>
